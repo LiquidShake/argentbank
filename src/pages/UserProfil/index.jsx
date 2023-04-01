@@ -3,6 +3,7 @@ import Account from './Account'
 import { useNavigate } from 'react-router'
 import { useSelector } from 'react-redux'
 import './userprofil.scss'
+import UserNameForm from './UserNameForm'
 
 export default function UserProfil() {
   let navigate = useNavigate()
@@ -17,10 +18,7 @@ export default function UserProfil() {
 
   return (
     <main>
-      <div className="header">
-          <h1>Welcome back<br />Tony Jarvis!</h1>
-          <button className="edit-button">Edit Name</button>
-      </div>
+      <UserNameForm />
       <h2 className="sr-only">Accounts</h2>
       <Account accNumber='8349' amount='2,082.79'/>
       <Account accNumber='6712' amount='10,928.42'/>
