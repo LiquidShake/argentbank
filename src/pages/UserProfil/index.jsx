@@ -10,6 +10,7 @@ export default function UserProfil() {
 
   const { token } = useSelector((state) => state.userLogin)
 
+  // if we do not have token, we are not connected so the user cannot acces profile page and is redirectedon the home page
   useEffect(() => {
     if (!token) {
       navigate('/')

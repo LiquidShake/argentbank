@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 export default function Nav() {
   const dispatch = useDispatch()
 
+  // if we have firstname, we are connected
   const { firstName } = useSelector((state) => state.userProfile)
 
   return (
@@ -19,7 +20,8 @@ export default function Nav() {
         />
         <h1 className="sr-only">Argent Bank</h1>
       </Link>
-      {firstName && (
+      {//When connected, display firstname and sign out button
+      firstName && (
         <div>
           <Link to='/profile'>
             <i className="fa fa-user-circle"></i>
@@ -31,7 +33,8 @@ export default function Nav() {
           </span>
         </div>
       )}
-      {!firstName && (
+      {// While not connected, display login button
+      !firstName && (
         <div>
           <Link to="/sign-in">
             <i className="fa fa-user-circle"></i>

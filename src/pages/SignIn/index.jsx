@@ -18,6 +18,7 @@ export default function SignIn() {
     dispatch(login(email, password))
   }
 
+  // if we have token, api responded correctly so we can navigate on profile page
   useEffect(() => {
     if (token) {
       navigate('/profile')
