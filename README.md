@@ -21,4 +21,3 @@ You may also see any lint errors in the console.
 ### Documentation de l'API
 
 - La documentation de l'API au format YAML est disponible [ici](https://github.com/LiquidShake/Project-10-Bank-API/blob/master/swagger.yaml)
-
